@@ -1,0 +1,68 @@
+/* public/css/virtual_piano.css */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #222;
+    /* Fundo escuro para melhor visualização do piano */
+    font-family: 'Terserah', Arial, sans-serif;
+    /* Usar a fonte personalizada */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+    /* Cor de texto padrão para mensagens de status */
+}
+
+/* @font-face {
+    font-family: 'Terserah';
+    src: url('../assets/fonts/Terserah.ttf') format('truetype');
+} */
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* Para colocar status e canvas */
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#infoStatus {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    z-index: 100;
+}
+
+#pianoCanvas {
+    display: block;
+    background-color: #333;
+    /* Cor de fundo para a área do canvas, se necessário */
+    /* As dimensões são definidas via JavaScript */
+}
+
+#videoFeed {
+    /* Opcional: mostrar o feed da câmera para debug ou como fundo */
+    /* Se for usar como fundo, posicione atrás do canvas */
+    /*
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    transform: scaleX(-1); // Espelhar o vídeo como é comum
+    */
+    display: none;
+    /* Mantido oculto por padrão */
+}
