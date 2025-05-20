@@ -7,7 +7,7 @@
     <div class="col-md-11 mx-auto">
         <div class="card">
             <div class="card-header">
-                <h1 class="fs-2 text-center dru-text-color-title">Computação Gráfica: Da Magia Visual à Realidade Digital</h1>
+                <h1 class="fs-2 text-center dru-text-color-title">Computação Gráfica: Da Magia Visual à Realidade Digital - ALTERAÇÃO TESTE</h1>
             </div>
             <div class="card-body">
                 <div class="w-100">
