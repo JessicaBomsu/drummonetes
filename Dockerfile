@@ -1,34 +1,30 @@
-# Estágio 1: Build de dependências
-FROM php:8.1-fpm-bullseye AS vendor
+FROM php:8.2-apache
 
-WORKDIR /var/www/html
-
+# Instala extensões PHP comuns do Laravel
 RUN apt-get update && apt-get install -y \
-    git unzip zip curl \
-    libpng-dev libjpeg-dev libfreetype6-dev \
-    libzip-dev libonig-dev \
-    && docker-php-ext-install pdo pdo_mysql mbstring exif pcntl tokenizer zip fileinfo \
-    && apt-get clean && rm -rf /var/lib/apt/lists/*
+    git unzip libzip-dev libpng-dev libonig-dev libxml2-dev \
+    && docker-php-ext-install pdo pdo_mysql zip mbstring exif pcntl bcmath
 
-COPY --from=composer:2.6 /usr/bin/composer /usr/bin/composer
-COPY composer.json composer.lock ./
-RUN composer install --optimize-autoloader --no-dev --no-interaction --no-scripts
+# Instala o Composer
+COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
-COPY . .
+# Copia os arquivos do Laravel
+COPY . /var/www/html
 
-RUN chmod -R o+w /var/www/html/storage /var/www/html/bootstrap/cache
+# Ajustes de permissões
+RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
 
-# Estágio 2: Produção
-FROM nginx:1.25-alpine
-
-RUN rm /etc/nginx/conf.d/default.conf
-COPY nginx-app.conf /etc/nginx/conf.d/app.conf
-
+# Define o diretório padrão
 WORKDIR /var/www/html
-COPY --from=vendor /var/www/html .
 
-COPY entrypoint.sh /usr/local/bin/entrypoint.sh
-RUN chmod +x /usr/local/bin/entrypoint.sh
+# Instala as dependências
+RUN composer install --no-dev --optimize-autoloader
 
+# Ativa o mod_rewrite do Apache
+RUN a2enmod rewrite
+
+# Define a porta do Cloud Run
 EXPOSE 8080
-ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
+
+# Define o comando de entrada (entrypoint)
+CMD ["apache2-foreground"]
