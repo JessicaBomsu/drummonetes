@@ -59,7 +59,8 @@ RUN php artisan view:cache
 RUN chmod -R o+w /var/www/html/storage /var/www/html/bootstrap/cache
 
 # Estágio 2: Imagem final de produção com Nginx e PHP-FPM
-FROM nginx:1.25-alpine # Usando uma versão estável e leve do Nginx
+FROM nginx:1.25-alpine 
+# Usando uma versão estável e leve do Nginx
 
 # Argumentos para usuário e grupo (para não rodar como root)
 ARG PUID=1000
