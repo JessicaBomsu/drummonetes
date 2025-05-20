@@ -1,0 +1,211 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    background-image: url('/img/tela-fundo.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'vhs-gothic', monospace;
+    font-size: small;
+    color: #f8e9a1;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+/* Estrelinhas e elementos pixelados */
+body::after {
+    content: '';
+    background: url('/img/img-fundo.png');
+    opacity: 0.1;
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* --- Navbar Adjustments --- */
+.navbar {
+    position: relative;
+    z-index: 1030;
+}
+
+/* --- Card e Conteúdo Geral --- */
+.card {
+    background-color: #f8d27f;
+    border-radius: 0;
+    border: 8px solid #da7635;
+    box-shadow: 8px 8px 0 #000;
+    padding: 1rem;
+    position: relative;
+    /* Espaçamento padrão do Bootstrap mb-3 ou mb-4 */
+    margin-bottom: 1.5rem;
+}
+
+.card-header h1,
+.card-header h2 {
+    color: #1a103d;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-family: 'upheavtt', monospace;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.card-header h2.h4 {
+    /* Para os títulos das páginas de conteúdo */
+    font-size: 1.75rem;
+    /* Ajuste conforme o visual desejado */
+    margin-bottom: 0.5rem;
+    /* Menor margem para subtítulos */
+}
+
+.card-header h1.fs-2 {
+    /* Para o título principal da página de conteúdo */
+    font-size: 2rem;
+}
+
+.question-step h5 {
+    color: #1a103d;
+    font-size: 16px;
+    margin-bottom: 1rem;
+}
+
+.form-check {
+    margin-bottom: 0.75rem;
+}
+
+.form-check-label {
+    color: #1a103d;
+    font-size: 14px;
+}
+
+.btn-primary {
+    background-color: #662e9b;
+    border: none;
+    padding: 1rem;
+    font-size: 12px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 4px 4px 0 #000;
+    border-radius: 0;
+    transition: 0.2s all ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: #8134af;
+    box-shadow: none;
+    transform: translate(2px, 2px);
+}
+
+.btn-secundary {
+    background-color: #D78E45;
+    border: none;
+    padding: 1rem;
+    font-size: 12px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 4px 4px 0 #000;
+    border-radius: 0;
+    transition: 0.2s all ease-in-out;
+}
+
+.btn-secundary:hover {
+    background-color: #FFC940;
+    color: #D78E45;
+    box-shadow: none;
+    transform: translate(2px, 2px);
+}
+
+.dru-text-color-btn {
+    color: #D78E45;
+    font-family: '04B-balloon', monospace;
+    font-size: large;
+}
+
+.dru-text-color-btn-secundary {
+    color: #662e9b;
+    font-family: '04B-balloon', monospace;
+    font-size: large;
+}
+
+h5,
+/* Aplicado a todos os h5, incluindo os dos cards de conteúdo */
+label {
+    line-height: 1.6;
+}
+
+/* Estilo específico para h5 dentro dos cards de conteúdo se necessário */
+.card-body h3.h5 {
+    margin-top: 1.5rem;
+    /* Espaçamento antes de um subtítulo h5 */
+}
+
+
+/* FONTES */
+@font-face {
+    font-family: 'vhs-gothic';
+    src: url('/font/vhs-gothic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: '04B-balloon';
+    src: url('/font/04B-balloon.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'upheavtt';
+    src: url('/font/upheavtt.ttf') format('truetype');
+}
+
+.dru-fs-x-small {
+    font-size: x-small;
+}
+
+.dru-fs-small {
+    font-size: small !important;
+}
+
+.dru-text-color-labels {
+    color: #D78E45;
+    font-family: 'vhs-gothic', monospace;
+}
+
+.dru-text-color-title {
+    color: chocolate;
+    font-family: 'upheavtt', monospace;
+}
+
+.dru-text-color-subtitle {
+    color: chocolate;
+    font-family: 'upheavtt', monospace;
+}
+
+.dru-text-fs-text {
+    /* Texto principal dentro dos cards de conteúdo */
+    font-size: 12px;
+    /* Ou small, para consistência com o body */
+    color: chocolate;
+    line-height: 1.6;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.main-page-content {
+    overflow-x: hidden;
+    /* Aplica o corte do overflow horizontal APENAS ao conteúdo principal */
+    padding-top: 2rem;
+    /* Espaçamento do topo */
+    padding-bottom: 2rem;
+    /* Espaçamento inferior */
+}

@@ -38,7 +38,7 @@ class QuizController extends Controller
             ->shuffle();
 
         if ($questions->isEmpty()) {
-            return redirect()->route('content')->with('error', 'Não há questões disponíveis para o quiz. Por favor, volte mais tarde.');
+            return redirect()->route('content.introducao')->with('error', 'Não há questões disponíveis para o quiz. Por favor, volte mais tarde.');
         }
 
         return view('quiz', compact('questions'));
