@@ -70,17 +70,17 @@
             <div class="card-body">
                 <div class="w-100 dru-text-fs-text mb-4"> {{-- Adicionado dru-text-fs-text para consistência e mb-4 --}}
                     <p class="mb-2">
-                        Somos um grupo de entusiastas da tecnologia e apaixonadas pela computação gráfica,
-                        composto por Barbara Coelho, Jaciendy Nunes Teixeira, Jessica Emely Bomsucesso e Victoria Fernanda Dionizio.
+                        Somos um grupo de entusiastas da tecnologia e apaixonadas pela computação gráfica, composto 
+                        por Barbara Coelho, Jaciendy Nunes Teixeira, Jessica Emely Bomsucesso e Victoria Fernanda Dionizio.
                     </p>
                     <p class="mb-2">
-                        Desenvolvemos este site como um projeto para o Instituto de Tecnologia da Informação da Faculdade Carlos Drummond de Andrade, com o objetivo de apresentar a importância e as diversas aplicações da computação gráfica.
+                        Cada uma de nós traz uma perspectiva única e habilidades complementares para este projeto. Adoramos colaborar, trocar ideias e transformar conceitos em realidade.
                     </p>
                     <p class="mb-2">
-                        Nosso objetivo é proporcionar uma experiência interativa e educativa, onde os usuários podem aprender de forma divertida sobre os conceitos, história e o vasto campo da computação gráfica. Acreditamos no poder da computação gráfica para transformar dados em imagens visuais e seu impacto em áreas como jogos, design, cinema, medicina e muito mais.
+                        Quer saber mais sobre quem somos individualmente?
                     </p>
                     <p class="mb-2">
-                        Esperamos que este site desperte sua curiosidade e interesse por este campo fascinante!
+                        Conecte-se conosco no LinkedIn através dos links abaixo!
                     </p>
                 </div>
 
@@ -93,7 +93,7 @@
                         $equipe = [
                             ['nome' => 'Barbara', 'imagem' => 'Barbara.png', 'linkedin' => 'https://www.linkedin.com/in/barbara-exemplo'],
                             ['nome' => 'Jaciendy', 'imagem' => 'Jaciendy.png', 'linkedin' => 'https://www.linkedin.com/in/jaciendy-nunes-b483b2196/'],
-                            ['nome' => 'Jéssica', 'imagem' => 'Jess.png', 'linkedin' => 'https://www.linkedin.com/in/jessica-bomsucesso'],
+                            ['nome' => 'Jessica', 'imagem' => 'Jess.png', 'linkedin' => 'https://www.linkedin.com/in/jessica-bomsucesso'],
                             ['nome' => 'Victoria', 'imagem' => 'Vic.png', 'linkedin' => 'https://www.linkedin.com/in/victoria-fernanda-dionizio-aab960220'],
                         ];
                     @endphp

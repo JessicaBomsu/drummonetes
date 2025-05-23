@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Piano Virtual com Mãos')
+@section('title', 'CG - Piano Virtual')
 
 @push('styles')
     <link rel="stylesheet" href="{{ asset('css/virtual_piano.css') }}">

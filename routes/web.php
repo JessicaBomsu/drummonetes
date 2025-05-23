@@ -61,6 +61,7 @@ Route::get('/content-conceitos-avancados', [ContentController::class, 'conceitos
 Route::get('/content-aplicacoes', [ContentController::class, 'aplicacoes'])->name('content.aplicacoes');
 Route::get('/content-empregabilidade', [ContentController::class, 'empregabilidade'])->name('content.empregabilidade');
 Route::get('/content-conclusao', [ContentController::class, 'conclusao'])->name('content.conclusao');
+Route::get('/links-uteis', [ContentController::class, 'linksUteis'])->name('content.links-uteis');
 
 // Projeto Piano
 Route::get('/piano', [PianoController::class, 'index'])->name('piano');

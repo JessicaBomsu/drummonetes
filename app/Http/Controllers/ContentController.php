@@ -45,6 +45,11 @@ class ContentController extends Controller
     {
         return view('content/conteudo-conclusao');
     }
+
+    public function linksUteis()
+    {
+        return view('content/links-uteis');
+    }
     
     public function content()
     {

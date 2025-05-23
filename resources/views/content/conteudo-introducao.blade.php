@@ -1,23 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Computação Gráfica Completo')
-
-@push('styles')
-{{-- Adicione estilos específicos para o GIF se necessário --}}
-<style>
-    .intro-gif-container {
-        text-align: center; /* Para centralizar o GIF se ele for display: block ou inline-block */
-        margin-top: 1.5rem;
-        margin-bottom: 1.5rem;
-    }
-    .intro-gif {
-        max-width: 100%; /* Garante que o GIF seja responsivo e não ultrapasse o contêiner */
-        height: auto; /* Mantém a proporção do GIF */
-        border: 3px solid #da7635; /* Opcional: uma borda no estilo do seu site */
-        box-shadow: 5px 5px 0 #000000a0; /* Opcional: uma sombra */
-    }
-</style>
-@endpush
+@section('title', 'Computação Gráfica')
 
 @section('content')
 <div class="row">
@@ -32,7 +15,7 @@
                     <div class="row">
                         <div class="col-12 col-md-12 mb-4">
                             <h2 class="h5 dru-text-color-title">Introdução: Onde a Arte Encontra a Tecnologia</h2>
-                            </div>
+                        </div>
                     </div>
                     <div class="row fs-5">
                         <div class="col-12 col-md-12">
@@ -41,6 +24,13 @@
                                 jogos eletrônicos ou utilizou um aplicativo com uma interface visualmente atraente, então você
                                 já teve um encontro com essa área mágica que combina arte, ciência e muita tecnologia.
                             </p>
+
+                            {{-- LOCAL PARA INSERIR O GIF --}}
+                            <div class="intro-gif-container">
+                                <img src="{{ asset('img/marcacao_1.gif') }}" alt="GIF Ilustrativo sobre Computação Gráfica" class="intro-gif">
+                            </div>
+                            {{-- FIM DO LOCAL PARA INSERIR O GIF --}}
+
                             <p class="mb-2 dru-text-fs-text">
                                 Neste texto, vamos desvendar os segredos da Computação Gráfica, desde seus conceitos mais
                                 elementares até as aplicações mais avançadas que moldam nosso cotidiano e o futuro.
@@ -48,12 +38,6 @@
                                 essa disciplina se tornou uma força motriz em diversas indústrias, abrindo um leque de
                                 oportunidades para profissionais criativos e tecnicamente habilidosos.
                             </p>
-
-                            {{-- LOCAL PARA INSERIR O GIF --}}
-                            <div class="intro-gif-container">
-                                <img src="{{ asset('img/marcacao_1.gif') }}" alt="GIF Ilustrativo sobre Computação Gráfica" class="intro-gif">
-                            </div>
-                            {{-- FIM DO LOCAL PARA INSERIR O GIF --}}
 
                             <p class="mb-2 dru-text-fs-text">
                                 Nossa jornada será interativa e didática, buscando apresentar as informações de forma clara e

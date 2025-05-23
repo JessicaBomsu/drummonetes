@@ -193,7 +193,7 @@ label {
 
 .dru-text-fs-text {
     /* Texto principal dentro dos cards de conteúdo */
-    font-size: 12px;
+    font-size: 14px;
     /* Ou small, para consistência com o body */
     color: chocolate;
     line-height: 1.6;
@@ -208,4 +208,22 @@ label {
     /* Espaçamento do topo */
     padding-bottom: 2rem;
     /* Espaçamento inferior */
+}
+
+.intro-gif-container {
+    text-align: center;
+    /* Para centralizar o GIF se ele for display: block ou inline-block */
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.intro-gif {
+    max-width: 100%;
+    /* Garante que o GIF seja responsivo e não ultrapasse o contêiner */
+    height: auto;
+    /* Mantém a proporção do GIF */
+    border: 3px solid #da7635;
+    /* Opcional: uma borda no estilo do seu site */
+    box-shadow: 5px 5px 0 #000000a0;
+    /* Opcional: uma sombra */
 }

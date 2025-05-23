@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Computação Gráfica Completo')
+@section('title', 'Computação Gráfica')
 
 @section('content')
 <div class="row">
@@ -13,6 +13,12 @@
             <div class="card-body dru-text-fs-text">
                 <p>A Computação Gráfica deixou de ser uma curiosidade tecnológica para se tornar uma linguagem universal, uma ferramenta indispensável que molda a forma como vemos e interagimos com o mundo digital e, cada vez mais, com o mundo físico. Dos efeitos visuais que nos transportam para galáxias distantes à interface intuitiva do seu smartphone, sua presença é onipresente e seu impacto, profundo.</p>
                 <p>As fronteiras da Computação Gráfica continuam a se expandir, impulsionadas por avanços em inteligência artificial, poder de processamento e novas formas de interação, como a realidade virtual e aumentada. Para os apaixonados por arte e tecnologia, este é um campo incrivelmente excitante e promissor, repleto de desafios criativos e oportunidades para construir o futuro visual que nos espera. A jornada pela Computação Gráfica é contínua, e a próxima grande inovação pode estar apenas a alguns pixels de distância.</p>
+
+                {{-- LOCAL PARA INSERIR O GIF --}}
+                <div class="intro-gif-container">
+                    <img src="{{ asset('img/marcacao_11.png') }}" alt="GIF Ilustrativo sobre Computação Gráfica" class="intro-gif" style="max-width: 60%">
+                </div>
+                {{-- FIM DO LOCAL PARA INSERIR O GIF --}}
             </div>
         </div>
     </div>

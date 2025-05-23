@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Computação Gráfica Completo')
+@section('title', 'Computação Gráfica')
 
 @section('content')
 <div class="row">
@@ -9,13 +9,21 @@
         {{-- CARD PÁGINA 3: CONCEITOS AVANÇADOS --}}
         <div class="card mb-4">
             <div class="card-header">
-                <h2 class="h4 text-center dru-text-color-title">Página 3: Mergulhando em Conceitos Avançados – A Sofisticação por Trás da Magia</h2>
+                <h2 class="h4 text-center dru-text-color-title">Mergulhando em Conceitos Avançados – A Sofisticação por Trás da Magia</h2>
             </div>
             <div class="card-body dru-text-fs-text">
                 <p>Agora que entendemos os fundamentos e a trajetória histórica, vamos explorar alguns dos conceitos mais avançados que tornam a Computação Gráfica tão poderosa e visualmente deslumbrante.</p>
 
                 <h3 class="h5 mt-3 dru-text-color-title">Pipeline Gráfico (Graphics Pipeline)</h3>
-                <p>Imagine uma linha de montagem em uma fábrica. O pipeline gráfico é um conceito semelhante: uma sequência de etapas que os dados gráficos (como os vértices de um modelo 3D) percorrem para serem transformados em pixels na tela. Cada etapa realiza uma operação específica. As principais etapas incluem:</p>
+                <p>Imagine uma linha de montagem em uma fábrica. O pipeline gráfico é um conceito semelhante: uma sequência de etapas que os dados gráficos (como os vértices de um modelo 3D) percorrem para serem transformados em pixels na tela.</p>
+                
+                {{-- LOCAL PARA INSERIR O GIF --}}
+                        <div class="intro-gif-container">
+                            <img src="{{ asset('img/marcacao_12.png') }}" alt="GIF Ilustrativo sobre Computação Gráfica" class="intro-gif" style="max-width: 75%">
+                        </div>
+                        {{-- FIM DO LOCAL PARA INSERIR O GIF --}}
+
+                <p>Cada etapa realiza uma operação específica. As principais etapas incluem:</p>
                 <ul>
                     <li><strong>Modelagem:</strong> Definição da geometria dos objetos.</li>
                     <li><strong>Transformações Geométricas:</strong> Operações como translação (mover), rotação (girar) e escala (redimensionar) os objetos no espaço 3D.</li>
@@ -24,6 +32,13 @@
                     <li><strong>Recorte (Clipping):</strong> Remoção das partes dos objetos que estão fora do campo de visão da câmera.</li>
                     <li><strong>Rasterização:</strong> Conversão das informações geométricas (primitivas como triângulos) em pixels na tela.</li>
                     <li><strong>Texturização:</strong> Aplicação de imagens (texturas) às superfícies dos objetos para adicionar detalhes, como a madeira de uma mesa ou a pele de um personagem.</li>
+                    
+                    {{-- LOCAL PARA INSERIR O GIF --}}
+                        <div class="intro-gif-container">
+                            <img src="{{ asset('img/marcacao_13.gif') }}" alt="GIF Ilustrativo sobre Computação Gráfica" class="intro-gif">
+                        </div>
+                        {{-- FIM DO LOCAL PARA INSERIR O GIF --}}
+
                     <li><strong>Teste de Visibilidade/Profundidade (Z-buffering):</strong> Determinação de quais objetos ou partes de objetos estão na frente de outros, para que apenas as superfícies visíveis sejam desenhadas.</li>
                 </ul>
             </div>
@@ -44,7 +59,15 @@
                 </ul>
 
                 <h4 class="h6 mt-4 dru-text-color-subtitle">Ray Tracing (Traçado de Raios)</h4>
-                <p>Como mencionado anteriormente, o ray tracing é uma técnica de renderização que simula o comportamento físico da luz. Para cada pixel na tela, um raio é traçado da câmera virtual para dentro da cena. O algoritmo então calcula as interações desse raio com os objetos (reflexões, refrações, sombras) para determinar a cor final do pixel. O resultado são imagens incrivelmente realistas, mas o processo é computacionalmente intensivo. Avanços recentes em hardware (como as GPUs RTX da Nvidia) tornaram o ray tracing em tempo real uma realidade em jogos.</p>
+                <p>Como mencionado anteriormente, o ray tracing é uma técnica de renderização que simula o comportamento físico da luz. </p>
+                
+                {{-- LOCAL PARA INSERIR O GIF --}}
+                        <div class="intro-gif-container">
+                            <img src="{{ asset('img/marcacao_14.jpg') }}" alt="GIF Ilustrativo sobre Computação Gráfica" class="intro-gif">
+                        </div>
+                        {{-- FIM DO LOCAL PARA INSERIR O GIF --}}
+
+                <p>Para cada pixel na tela, um raio é traçado da câmera virtual para dentro da cena. O algoritmo então calcula as interações desse raio com os objetos (reflexões, refrações, sombras) para determinar a cor final do pixel. O resultado são imagens incrivelmente realistas, mas o processo é computacionalmente intensivo. Avanços recentes em hardware (como as GPUs RTX da Nvidia) tornaram o ray tracing em tempo real uma realidade em jogos.</p>
             </div>
         </div>
         <div class="card mb-4">
@@ -53,7 +76,15 @@
                 <p>Dar vida a objetos e personagens é o domínio da animação por computador. Algumas técnicas incluem:</p>
                 <ul>
                     <li><strong>Keyframing:</strong> O animador define poses-chave (keyframes) em diferentes momentos do tempo, e o computador interpola o movimento entre esses keyframes.</li>
-                    <li><strong>Captura de Movimento (Motion Capture - MoCap):</strong> Sensores são colocados em um ator real, e seus movimentos são gravados e transferidos para um personagem digital. Isso proporciona um movimento muito natural e realista.</li>
+                    <li><strong>Captura de Movimento (Motion Capture - MoCap):</strong> Sensores são colocados em um ator real, e seus movimentos são gravados e transferidos para um personagem digital.</p>
+                    
+                    {{-- LOCAL PARA INSERIR O GIF --}}
+                        <div class="intro-gif-container">
+                            <img src="{{ asset('img/marcacao_15.gif') }}" alt="GIF Ilustrativo sobre Computação Gráfica" class="intro-gif">
+                        </div>
+                        {{-- FIM DO LOCAL PARA INSERIR O GIF --}}
+
+                    <p>Isso proporciona um movimento muito natural e realista.</li>
                     <li><strong>Simulação Física:</strong> Utilização de leis da física para animar fenômenos como tecidos, fluidos, fumaça, explosões e colisões de objetos.</li>
                 </ul>
             </div>
@@ -61,7 +92,21 @@
         <div class="card mb-4">
             <div class="card-body dru-text-fs-text">
                 <h3 class="h5 mt-3 dru-text-color-title">Modelagem Procedural</h3>
-                <p>Em vez de criar cada detalhe manualmente, a modelagem procedural utiliza algoritmos para gerar geometria, texturas e outros elementos gráficos. Isso é útil para criar mundos vastos e complexos (como florestas, cidades) ou objetos com padrões intrincados.</p>
+                <p>Em vez de criar cada detalhe manualmente, a modelagem procedural utiliza algoritmos para gerar geometria, texturas e outros elementos gráficos.</p>
+                
+                {{-- LOCAL PARA INSERIR O GIF --}}
+                <div class="intro-gif-container">
+                    <img src="{{ asset('img/marcacao_2.gif') }}" alt="GIF Ilustrativo sobre Computação Gráfica" class="intro-gif">
+                </div>
+                {{-- FIM DO LOCAL PARA INSERIR O GIF --}}
+
+                <p>Isso é útil para criar mundos vastos e complexos (como florestas, cidades) ou objetos com padrões intrincados.</p>
+
+                {{-- LOCAL PARA INSERIR O GIF --}}
+                <div class="intro-gif-container">
+                    <img src="{{ asset('img/marcacao_16.gif') }}" alt="GIF Ilustrativo sobre Computação Gráfica" class="intro-gif">
+                </div>
+                {{-- FIM DO LOCAL PARA INSERIR O GIF --}}
             </div>
         </div>
         <div class="card mb-4">

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Computação Gráfica Completo')
+@section('title', 'Computação Gráfica')
 
 @section('content')
 <div class="row">
@@ -9,7 +9,7 @@
         {{-- CARD PÁGINA 5: EMPREGABILIDADE --}}
         <div class="card mb-4">
             <div class="card-header">
-                <h2 class="h4 text-center dru-text-color-title">Página 5: Empregabilidade na Computação Gráfica – Habilidades para Dominar e Oportunidades de Carreira</h2>
+                <h2 class="h4 text-center dru-text-color-title">Empregabilidade na Computação Gráfica – Habilidades para Dominar e Oportunidades de Carreira</h2>
             </div>
             <div class="card-body dru-text-fs-text">
                 <p>A Computação Gráfica é um campo vibrante e em constante crescimento, oferecendo diversas oportunidades de carreira para aqueles que possuem a combinação certa de habilidades artísticas e técnicas.</p>
@@ -21,8 +21,22 @@
                     <li><strong>Habilidades Técnicas (Software e Conceitos):</strong>
                         Domínio de Softwares Específicos (Modelagem 3D: Blender, Maya, 3ds Max, ZBrush; Texturização: Substance Painter, Photoshop; Renderização: V-Ray, Arnold; Animação: Maya, Blender; Composição: After Effects, Nuke; Game Engines: Unity, Unreal Engine; Design Gráfico 2D: Photoshop, Illustrator). Conhecimento dos Conceitos Fundamentais (pipeline gráfico, modelagem poligonal, UV mapping, iluminação, rigging, etc.). Noções de Programação (Python, C++, HLSL/GLSL) são um diferencial.
                     </li>
+                    
+                    {{-- LOCAL PARA INSERIR O GIF --}}
+                    <div class="intro-gif-container">
+                        <img src="{{ asset('img/marcacao_23.gif') }}" alt="GIF Ilustrativo sobre Computação Gráfica" class="intro-gif">
+                    </div>
+                    {{-- FIM DO LOCAL PARA INSERIR O GIF --}}
+
                     <li><strong>Habilidades Interpessoais e Profissionais:</strong> Resolução de Problemas, Atenção aos Detalhes, Trabalho em Equipe, Comunicação, Adaptabilidade e Aprendizado Contínuo, Gerenciamento de Tempo.</li>
                     <li><strong>Portfólio Sólido:</strong> Essencial para demonstrar suas habilidades.</li>
+
+                    {{-- LOCAL PARA INSERIR O GIF --}}
+                    <div class="intro-gif-container">
+                        <img src="{{ asset('img/marcacao_24.gif') }}" alt="GIF Ilustrativo sobre Computação Gráfica" class="intro-gif">
+                    </div>
+                    {{-- FIM DO LOCAL PARA INSERIR O GIF --}}
+
                 </ul>
             </div>
         </div>

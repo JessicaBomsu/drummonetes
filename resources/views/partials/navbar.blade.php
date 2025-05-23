@@ -1,9 +1,13 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
         @if(auth()->user())
-            <a class="navbar-brand" href="{{ route('index')}}">Home</a>
+            <a class="navbar-brand" href="{{ route('index')}}">
+                <img src="{{ asset('img/logo.png')}}" alt="DRUMMONETES Logo" height="40" class="d-inline-block align-middle me-2">
+            </a>
         @else
-            <a class="navbar-brand" href="{{ url('/') }}">Home</a>
+            <a class="navbar-brand" href="{{ url('/') }}">
+                <img src="{{ asset('img/logo.png')}}" alt="DRUMMONETES Logo" height="40" class="d-inline-block align-middle me-2">
+            </a>
         @endif
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
@@ -38,6 +42,9 @@
                         </li>
                         <li>
                             <a class="dropdown-item" href="{{ route('content.conclusao') }}">Conclusão</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="{{ route('content.links-uteis') }}">Referências</a>
                         </li>
                     </ul>
                 </li>
